@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_19_210521) do
+ActiveRecord::Schema.define(version: 2019_07_19_223530) do
 
   create_table "events", force: :cascade do |t|
     t.datetime "time"
-    t.integer "stepId"
+    t.integer "step_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "done", default: false
+    t.integer "goal_id"
   end
 
   create_table "goals", force: :cascade do |t|
