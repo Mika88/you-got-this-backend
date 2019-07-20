@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :events
-  resources :steps
-  resources :goals
+  namespace :api do
+    namespace :v1 do
+      resources :events
+      resources :steps
+      resources :goals
+    end
+  end
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
