@@ -6,11 +6,16 @@ class Api::V1::GoalsController < ApplicationController
 
     def create
        @goal = Goal.new(goal_params)
-       @goal.save
-       render json: @goal
+       if @goal.save
+         render json: @goal
+       else
+         render json: { errors: { message: "Goal failed to save"}}
+       end
     end
 
+    private 
+
     def goal_params
-        params.require(:goal).permit(:text, :reason, :deadline)
-      end
+      params.require(:goal).permit(:text, :reason, :deadline)
+    end
 end
