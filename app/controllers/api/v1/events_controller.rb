@@ -12,7 +12,10 @@ class Api::V1::EventsController < ApplicationController
          render json: { errors: { message: "Event failed to save"}}
        end
     end
-
+    
+    def destroy
+        @event = Event.find(params[:id]).destroy
+    end
     private 
 
     def event_params
