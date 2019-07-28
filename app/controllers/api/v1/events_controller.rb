@@ -15,7 +15,7 @@ class Api::V1::EventsController < ApplicationController
 
     private 
 
-    def step_params
+    def event_params
       params.require(:event).permit(:time, :step_id)
     end
 
