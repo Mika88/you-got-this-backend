@@ -12,6 +12,11 @@ class Api::V1::StepsController < ApplicationController
          render json: { errors: { message: "Step failed to save"}}
        end
     end
+    
+    def destroy
+      @step = Step.find(params[:id]).destroy
+      render json: @step
+    end
 
     private 
 
