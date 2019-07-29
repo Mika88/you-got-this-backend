@@ -3,3 +3,4 @@ class ChangeTimeToBeStringInEvents < ActiveRecord::Migration[5.2]
     change_column :events, :time, :string
   end
 end
+

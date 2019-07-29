@@ -12,6 +12,11 @@ class Api::V1::GoalsController < ApplicationController
          render json: { errors: { message: "Goal failed to save"}}
        end
     end
+    
+    def destroy
+      @goal = Goal.find(params[:id]).destroy
+      render json: @goal
+    end
 
     private 
 
