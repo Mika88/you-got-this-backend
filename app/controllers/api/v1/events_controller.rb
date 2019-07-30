@@ -18,7 +18,7 @@ class Api::V1::EventsController < ApplicationController
         render json: @event
     end
 
-    def update
+    def update 
         @event = Event.find(params[:id])
         if @event.update(event_params)
           render json: @event
@@ -30,7 +30,7 @@ class Api::V1::EventsController < ApplicationController
     private 
 
     def event_params
-      params.require(:event).permit(:time, :step_id)
+      params.require(:event).permit(:time, :step_id, :done)
     end
 
 end
