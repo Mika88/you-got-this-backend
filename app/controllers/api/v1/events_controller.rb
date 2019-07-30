@@ -17,6 +17,16 @@ class Api::V1::EventsController < ApplicationController
         @event = Event.find(params[:id]).destroy
         render json: @event
     end
+
+    def update
+        @event = Event.find(params[:id])
+        if @event.update(event_params)
+          render json: @event
+        else
+          render json: { errors: { message: "Event failed to update"}}
+        end
+      end
+
     private 
 
     def event_params
