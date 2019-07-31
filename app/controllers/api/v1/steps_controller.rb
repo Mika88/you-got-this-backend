@@ -17,11 +17,20 @@ class Api::V1::StepsController < ApplicationController
       @step = Step.find(params[:id]).destroy
       render json: @step
     end
-
+    
+    def update 
+      @step = Step.find(params[:id])
+      if @step.update(step_params)
+        render json: @step
+      else
+        render json: { errors: { message: "Event failed to update"}}
+      end 
+    end
+    
     private 
 
     def step_params
-      params.require(:step).permit(:text, :goal_id)
+      params.require(:step).permit(:text, :goal_id, :done)
     end
 
 end
