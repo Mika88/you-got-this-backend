@@ -21,6 +21,6 @@ class Api::V1::GoalsController < ApplicationController
     private 
 
     def goal_params
-      params.require(:goal).permit(:text, :reason, :deadline)
+      params.require(:goal).permit(:text, :about, :deadline)
     end
 end

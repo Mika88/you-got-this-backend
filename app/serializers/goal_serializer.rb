@@ -1,5 +1,5 @@
 class GoalSerializer < ActiveModel::Serializer
-  attributes :id, :text, :reason, :deadline
+  attributes :id, :text, :about, :deadline
 
   has_many :steps
 end
