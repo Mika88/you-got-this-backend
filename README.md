@@ -1,6 +1,6 @@
 # You-Got-This Backend API 
 
-You-Got-This backend is a Ruby on Rails API for the You-Got-This frontend application, which is a goal tracker React application. 
+You-Got-This backend is a Ruby on Rails API for the You-Got-This frontend application, a goal tracker React application:
 
 https://github.com/Mika88/you-got-this-frontend
 
@@ -10,7 +10,7 @@ https://github.com/Mika88/you-got-this-frontend
 - `$ git@github.com:Mika88/you-got-this-backend.git`
 - `$ cd you-got-this-backend` 
 
- Install Gems
+ Install Gemfile
 
 - `$ bundle install`
 
