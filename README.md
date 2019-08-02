@@ -6,28 +6,28 @@ https://github.com/Mika88/you-got-this-frontend
 
 ## Getting started
 
-- Clone this repo
+ Clone this repo
 - `$ git@github.com:Mika88/you-got-this-backend.git`
 - `$ cd you-got-this-backend` 
 
-- Install Gems
+ Install Gems
 
 - `$ bundle install`
 
-- Setup database
+ Setup database
 
 - ` $ rake db:migrate `
 
 ## Usage
 
  To not conflict with the frontend server, which runs on localhost:3000,
- start server by running `rails server -p 3001`.
+ start server by running `$ rails server -p 3001`.
  This will get the API running on localhost:3001 .
 
  The json data will be availabe on:
-  http://0.0.0.0:3001/api/v1/goals
-  http://0.0.0.0:3001/api/v1/steps
-  http://0.0.0.0:3001/api/v1/events  
+  - http://0.0.0.0:3001/api/v1/goals
+  - http://0.0.0.0:3001/api/v1/steps
+  - http://0.0.0.0:3001/api/v1/events  
   
 ## Contributing
 
