@@ -17,4 +17,10 @@ class Api::V1::UsersController < ApplicationController
     @user = User.find(params[:id]).destroy
     render json: @user
   end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:username, :email, :password)
+  end
 end
