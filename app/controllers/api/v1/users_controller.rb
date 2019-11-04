@@ -12,4 +12,9 @@ class Api::V1::UsersController < ApplicationController
       render json: { errors: { message: "user failed to save"}}
     end
   end
+
+  def destroy
+    @user = User.find(params[:id]).destroy
+    render json: @user
+  end
 end
